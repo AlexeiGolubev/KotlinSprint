@@ -1,4 +1,4 @@
-package org.example
+package org.example.lesson_01
 
 fun main() {
     val distanceOfGagarinSpaceFlightInMillimeters: Long = 40_868_600_000
