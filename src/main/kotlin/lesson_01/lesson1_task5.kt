@@ -1,5 +1,7 @@
 package org.example.lesson_01
 
+const val TIME_CONST = 60
+
 //    Объяви переменную с количеством секунд, которые Гагарин провел в космосе.
 //
 //    - Переведи в коде количество секунд в целые минуты и целые часы, сохраняя остаток секунд и минут в новые переменные;
@@ -8,9 +10,9 @@ package org.example.lesson_01
 
 fun main() {
     val numberOfSecondsOfGagarinSpaceFlight: Short = 6480
-    val numberOfHours = numberOfSecondsOfGagarinSpaceFlight / 3600
-    val numberOfMinutes = numberOfSecondsOfGagarinSpaceFlight % 3600 / 60
-    val numberOfSeconds = numberOfSecondsOfGagarinSpaceFlight % 3600 % 60
+    val numberOfHours = numberOfSecondsOfGagarinSpaceFlight / (TIME_CONST*TIME_CONST)
+    val numberOfMinutes = numberOfSecondsOfGagarinSpaceFlight % (TIME_CONST*TIME_CONST) / TIME_CONST
+    val numberOfSeconds = numberOfSecondsOfGagarinSpaceFlight % (TIME_CONST*TIME_CONST) % TIME_CONST
 
     print("Время, проведённое Гагарином в космосе: ")
     println("${String.format("%02d",numberOfHours)}:" +
