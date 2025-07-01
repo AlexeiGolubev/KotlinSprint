@@ -14,16 +14,14 @@ fun main() {
     val trainDepartureMinute = 39
     val departureTime = trainDepartureHour * TIME_CONST + trainDepartureMinute
     val travelTime = 457
-    var dayOfTrainArrival = 0
-    var hourOfTrainArrival = (departureTime + travelTime) / TIME_CONST
-    val minuteOfTrainArrival = (departureTime + travelTime) % TIME_CONST
 
-    if (hourOfTrainArrival >= DAY_CONST ) {
-        dayOfTrainArrival = hourOfTrainArrival / DAY_CONST
-        hourOfTrainArrival = hourOfTrainArrival % DAY_CONST
-    }
+    val totalNumberOfMinutes = departureTime + travelTime
+    val totalNumberOfHours = totalNumberOfMinutes / TIME_CONST
+    val dayOfTrainArrival = totalNumberOfHours / DAY_CONST
+    val hourOfTrainArrival = totalNumberOfHours % DAY_CONST
+    val minuteOfTrainArrival = totalNumberOfMinutes % TIME_CONST
 
     println("Дней в пути: $dayOfTrainArrival")
-    println("Время пребывания поезда: ${String.format("%02d", hourOfTrainArrival)}:${String.format("%02d", minuteOfTrainArrival)}")
+    println("Время прибытия поезда: %02d:%02d".format(hourOfTrainArrival, minuteOfTrainArrival))
 
 }
