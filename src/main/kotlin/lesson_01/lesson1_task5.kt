@@ -10,13 +10,11 @@ const val TIME_CONST = 60
 
 fun main() {
     val numberOfSecondsOfGagarinSpaceFlight: Short = 6480
-    val numberOfHours = numberOfSecondsOfGagarinSpaceFlight / (TIME_CONST*TIME_CONST)
-    val numberOfMinutes = numberOfSecondsOfGagarinSpaceFlight % (TIME_CONST*TIME_CONST) / TIME_CONST
-    val numberOfSeconds = numberOfSecondsOfGagarinSpaceFlight % (TIME_CONST*TIME_CONST) % TIME_CONST
+    val numberOfHours = numberOfSecondsOfGagarinSpaceFlight / (TIME_CONST * TIME_CONST)
+    val numberOfMinutes = numberOfSecondsOfGagarinSpaceFlight % (TIME_CONST * TIME_CONST) / TIME_CONST
+    val numberOfSeconds = numberOfSecondsOfGagarinSpaceFlight % (TIME_CONST * TIME_CONST) % TIME_CONST
 
     print("Время, проведённое Гагарином в космосе: ")
-    println("${String.format("%02d",numberOfHours)}:" +
-            "${String.format("%02d",numberOfMinutes)}:" +
-            "${String.format("%02d",numberOfSeconds)}")
+    println("%02d:%02d:%02d".format(numberOfHours, numberOfMinutes, numberOfSeconds))
 
 }
