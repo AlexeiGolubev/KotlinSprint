@@ -7,15 +7,18 @@ package org.example.lesson_03
 //– Далее этим переменным нужно присвоить новые данные и вывести в консоль следующий ход белых. Определить, какое значение будет в переменной "куда" для фигуры, стоящей на D2 и продвинувшейся на одну клетку вперед.
 
 fun main() {
-    val squareNumbers = arrayOf(1, 2, 3, 4, 5, 6, 7, 8)
-    val squareLetters = arrayOf('A', 'B', 'C', 'D', 'E', 'F', 'G', 'H')
+    var moveFrom = "E2"
+    var moveTo = "E4"
     var numberOfMoves = 1
 
-    var stringOfMoves = "[%S%d-%S%d;%d]".format(squareLetters[4], squareNumbers[1], squareLetters[4], squareNumbers[3], numberOfMoves)
+    var stringOfMoves = "[%S-%S;%d]".format(moveFrom, moveTo, numberOfMoves)
     println(stringOfMoves)
     numberOfMoves++
 
-    stringOfMoves = "[%S%d-%S%d;%d]".format(squareLetters[3], squareNumbers[1], squareLetters[3], squareNumbers[2], numberOfMoves)
+    moveFrom = "D2"
+    moveTo = "D3"
+
+    stringOfMoves = "[%S-%S;%d]".format(moveFrom, moveTo, numberOfMoves)
     println(stringOfMoves)
     numberOfMoves++
 
