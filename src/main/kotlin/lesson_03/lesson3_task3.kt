@@ -15,10 +15,12 @@ package org.example.lesson_03
 fun main() {
     val number = 6
     val numbersForMultiplicationTable = arrayOf(1, 2, 3, 4, 5, 6, 7, 8, 9)
+    var multiplicationTable = "Таблица умножения для числа $number"
 
-    println("Таблица умножения для числа $number")
     for (i in numbersForMultiplicationTable) {
-        println("$number х $i = ${number * i}")
+        multiplicationTable += "\n$number х $i = ${number * i}"
     }
+
+    println(multiplicationTable)
 
 }
